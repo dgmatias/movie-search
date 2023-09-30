@@ -1,0 +1,44 @@
+<header>
+
+    <nav>
+        
+        <div class="container">
+
+            <div class="left-content">
+
+                 <a id="logo" routerLink="">Movie search</a> 
+                
+            </div>
+
+            <div class="right-content">
+
+                 <a class="item-header" routerLink="">Login</a> 
+                 <a class="item-header" routerLink="">Cadastrar</a>
+                 <i (click)="toggleSideMenu()" id="bars" class="fa-solid fa-bars" style="color: #ffffff;"></i> 
+            </div>
+
+        </div>
+
+        <div *ngIf="statusSideMenu" class="side-menu">
+                    
+
+            <div>
+
+                <div>
+                    <div id="close-container"><i (click)="toggleSideMenu()" id="close" class="fa-solid fa-x" style="color: #ffffff;"></i></div>
+                </div>
+
+            </div>
+
+            <div id="item-side-menu-container">
+                <div> <a class="item-side-menu"> Login </a></div>
+                <div> <a class="item-side-menu"> Cadastrar </a></div>
+                  
+            </div>
+
+        </div>
+
+
+    </nav>
+
+</header>
