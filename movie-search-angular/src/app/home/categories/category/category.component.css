@@ -1,0 +1,21 @@
+.container {
+    width: 180px;
+    opacity: 0.9;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+
+img {
+    width: 180px;
+    height: 100%;
+}
+
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+.container:hover {
+    opacity: 1;
+}

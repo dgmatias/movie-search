@@ -46,11 +46,11 @@
         width: 40vw;
         line-height: 35px;
         /* background-color: #0A0014; */
-        background-color: #030005;
+        background-color: #0A0014;
         position: absolute;
         top:0;
         right: 0;
-        height: 100vh;
+        height: 50vh;
     }
     
     #item-side-menu-container {
