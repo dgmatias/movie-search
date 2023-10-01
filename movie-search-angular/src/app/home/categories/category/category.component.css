@@ -1,5 +1,5 @@
 .container {
-    width: 180px;
+    width: 200px;
     opacity: 0.9;
     cursor: pointer;
     /* background-color: aqua; */
@@ -16,6 +16,8 @@ img {
 h2 {
     color: white;
     text-align: center;
+    font-size: 23px;
+    padding-top: 1rem;
 }
 
 .container:hover {
