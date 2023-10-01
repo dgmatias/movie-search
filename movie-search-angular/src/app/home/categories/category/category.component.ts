@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CategoryModel } from 'src/app/model/category-model';
 
 @Component({
   selector: 'mov-category',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent {
-
+  @Input() category!: CategoryModel;
 }

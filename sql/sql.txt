@@ -1,0 +1,15 @@
+CREATE DATABASE movieSearchDB;
+
+use movieSearchDB;
+
+CREATE TABLE categories(
+	id int PRIMARY KEY AUTO_INCREMENT,
+ 	name varchar(30) UNIQUE NOT NULL,
+    img varchar(255) UNIQUE NOT NULL
+);
+
+INSERT INTO categories (name, img) VALUES
+('Ação', 'acao.jpg'),
+('Infantil', 'infantil.jpg'),
+('Comédia', 'comedia.jpg'),
+('Terror', 'terror.jpg');

@@ -3,11 +3,13 @@
     opacity: 0.9;
     cursor: pointer;
     /* background-color: aqua; */
+    /* height: 400px; */
 }
 
 img {
-    width: 180px;
-    height: 100%;
+    width: 200px;
+    height: 300px;
+
 }
 
 

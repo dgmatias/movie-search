@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { CategoriesComponent } from './home/categories/categories.component';
 import { CategoryComponent } from './home/categories/category/category.component';
+import { CategoryService } from './service/category-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { CategoryComponent } from './home/categories/category/category.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

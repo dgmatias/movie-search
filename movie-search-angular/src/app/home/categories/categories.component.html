@@ -4,15 +4,9 @@
 
     <div class="card-container">
 
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
-        <mov-category></mov-category>
+        <mov-category *ngFor="let c of categories" [category]="c"></mov-category>
+
+        <div *ngIf="categories.length === 0"> <span> Não existem categorias, adicione alguma.</span> </div>
 
     </div>
 

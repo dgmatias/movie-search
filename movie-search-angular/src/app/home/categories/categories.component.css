@@ -1,5 +1,6 @@
 .container {
     background-color: #130026;
+    min-height: 25vh;
 }
 
 h1 {
@@ -19,3 +20,9 @@ h1 {
     margin-right: 2rem;
     margin-top: 2rem;
 }
+
+span {
+    color: white;
+    font-size: 20px;
+}
+
