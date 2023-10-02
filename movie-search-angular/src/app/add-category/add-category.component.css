@@ -1,0 +1,91 @@
+.container {
+    padding: 2rem;
+    height: 85vh;
+    background-color: #130026;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+label {
+    font-size: 25px;
+    color: white;
+}
+
+label,input {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    padding: 2rem;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    /* background-color: red; */
+    padding: 2rem;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.input-name {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    padding: 0.5rem;
+}
+
+p {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.input-file {
+    color: #ffffff; 
+}
+
+.input-submit {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 30px;
+    background-color: white;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    label {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    .input-submit {
+        font-size: 4.7vw;
+    }
+
+}

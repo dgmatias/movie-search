@@ -39,7 +39,7 @@
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     .side-menu {
         display: block;
@@ -62,7 +62,7 @@
 
     .item-side-menu {
 
-        font-size: 5vw;
+        font-size: 3.5vw;
     }
 
     #close-container {

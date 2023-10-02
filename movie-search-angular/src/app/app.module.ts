@@ -16,6 +16,7 @@ import { MovieService } from './service/movie-service';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { InfoComponent } from './movie-info/info/info.component';
 import { InfoBannerComponent } from './movie-info/info-banner/info-banner.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InfoBannerComponent } from './movie-info/info-banner/info-banner.compon
     MovieComponent,
     MovieInfoComponent,
     InfoComponent,
-    InfoBannerComponent
+    InfoBannerComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
