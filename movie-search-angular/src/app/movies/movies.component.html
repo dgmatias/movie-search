@@ -1,0 +1,13 @@
+<div class="container">
+
+    <div> <h1> Filmes de ação </h1> </div>
+
+    <div class="card-container">
+
+        <mov-movie *ngFor="let m of movies" [movie]="m"></mov-movie>
+
+        <div *ngIf="movies.length == 0"> <span>Não existe nenhum filme nessa categoria, adicione algum filme.</span> </div>
+
+    </div>
+
+</div>

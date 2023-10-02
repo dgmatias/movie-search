@@ -16,6 +16,7 @@ import service.CategoryService;
 public class CategoryResource {
 	
 	
+	//http://localhost:8080/movie-search/rest/category/list
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("list")

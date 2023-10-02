@@ -10,6 +10,9 @@ import { CategoriesComponent } from './home/categories/categories.component';
 import { CategoryComponent } from './home/categories/category/category.component';
 import { CategoryService } from './service/category-service';
 import { HttpClientModule } from '@angular/common/http';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
+import { MovieService } from './service/movie-service';
 
 @NgModule({
   declarations: [
@@ -18,14 +21,16 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     BannerComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    MoviesComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [CategoryService],
+  providers: [CategoryService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

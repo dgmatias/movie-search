@@ -1,0 +1,25 @@
+.container {
+    width: 200px;
+    opacity: 0.9;
+    cursor: pointer;
+    /* background-color: aqua; */
+    /* height: 400px; */
+}
+
+img {
+    width: 200px;
+    height: 300px;
+
+}
+
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    padding-top: 1rem;
+}
+
+.container:hover {
+    opacity: 1;
+}
