@@ -16,5 +16,7 @@ public class CategoryService {
 	public Category listCategoryById(Integer id) {
 		return categoryDao.querryAllDbById(id);
 	}
-	
+	public boolean addCategory(Category category) {
+		return categoryDao.insertCatergory(category);
+	}
 }

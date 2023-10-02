@@ -11,6 +11,7 @@ import model.Category;
 
 public class CategoryDAO {
 	
+	@SuppressWarnings("finally")
 	public Category querryAllDbById(Integer id) {
 		
 		Connection cnx = Dao.getConnection();
@@ -78,6 +79,34 @@ public class CategoryDAO {
 			return categorylist;
 		}
 		
+	}
+	
+	public boolean insertCatergory(Category category) {
+		
+		Connection cnx = Dao.getConnection();
+		
+		boolean result = false;
+	
+		String sql = "INSERT INTO categories (name, img) VALUES (?,?) ";
+		
+		PreparedStatement ps;
+		
+		try {
+			ps = cnx.prepareStatement(sql);
+			ps.setString(1, category.getName());
+			ps.setString(2, category.getImg());
+			
+			Integer i = ps.executeUpdate();
+			
+			result = i > 0 ? true : false; 
+
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 	
 }

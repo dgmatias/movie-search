@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoryModel } from '../model/category-model';
+import { CategoryService } from '../service/category-service';
 
 @Component({
   selector: 'mov-add-category',
@@ -13,6 +14,8 @@ export class AddCategoryComponent {
     name: "",
     img: "",
   }
+
+  constructor(private categoryService: CategoryService) {}
 
   onFileSelected(event: any) {
     const selectedFile = event.target.files[0];
@@ -28,6 +31,8 @@ export class AddCategoryComponent {
 
   onSubmit() {
     console.log(this.category);
+
+    this.categoryService.addCategory(this.category).subscribe(()=> this.categoryService.listCategories());
   }
 
 }

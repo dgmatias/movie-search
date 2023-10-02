@@ -17,4 +17,8 @@ export class CategoryService {
         return this.http.get<CategoryModel>(`${PRO_API}/movie-search/rest/category/category/${id}`);
     }
 
+    addCategory(category: CategoryModel) {
+        return this.http.post(`${PRO_API}/movie-search/rest/category/category/`, category);
+    }
+
 }

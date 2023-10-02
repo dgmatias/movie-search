@@ -12,8 +12,12 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Dao.getConnection();
-		//Category category = new Category();
+		Category category = new Category();
+		CategoryDAO categoryDAO = new CategoryDAO();
+		category.setName("Drama");
+		category.setImg("drama.jpg");
 		
+		categoryDAO.insertCatergory(category);
 		//Movie movie = new Movie();
 		
 		//movie.setName("Filme 4 ");
@@ -32,8 +36,8 @@ public class App {
 		//movieDAO.insertMovie(movie);
 		
 		//CategoryService categoryService = new CategoryService();
-		CategoryDAO categoryDao = new CategoryDAO();
-		System.out.println(categoryDao.querryAllDbById(2));
+		//CategoryDAO categoryDao = new CategoryDAO();
+		//System.out.println(categoryDao.querryAllDbById(2));
 		//List<Category> categoryList =  categoryService.listCategory();
 		
 		//categoryList.forEach(result -> System.out.println(result.toString()));
