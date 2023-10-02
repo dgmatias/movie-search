@@ -13,4 +13,8 @@ export class CategoryService {
         return this.http.get<CategoryModel[]>(`${PRO_API}/movie-search/rest/category/list`);
     }
 
+    listCategoryById(id: number): Observable<CategoryModel> {
+        return this.http.get<CategoryModel>(`${PRO_API}/movie-search/rest/category/category/${id}`);
+    }
+
 }

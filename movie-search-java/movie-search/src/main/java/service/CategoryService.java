@@ -13,4 +13,8 @@ public class CategoryService {
 		return categoryDao.queryAllDb();
 	}
 	
+	public Category listCategoryById(Integer id) {
+		return categoryDao.querryAllDbById(id);
+	}
+	
 }

@@ -2,6 +2,7 @@ package app;
 
 import java.util.List;
 
+import dao.CategoryDAO;
 import dao.MovieDAO;
 import model.Category;
 import model.Movie;
@@ -13,7 +14,7 @@ public class App {
 		//Dao.getConnection();
 		//Category category = new Category();
 		
-		Movie movie = new Movie();
+		//Movie movie = new Movie();
 		
 		//movie.setName("Filme 4 ");
 		//movie.setSinopse("Sinopse 4");
@@ -22,17 +23,17 @@ public class App {
 		//movie.setImg_banner("img_banner4.jpg");
 		//movie.setCategory_id(1);
 		
-		MovieDAO movieDAO = new MovieDAO();
+		//MovieDAO movieDAO = new MovieDAO();
 		//List<Movie> listMovie = movieDAO.queryAllDbByCategoryId(1);
 		//listMovie.forEach(result -> System.out.println(result.toString()));
 		
-		System.out.println(movieDAO.queryAllById(2));
+		//System.out.println(movieDAO.queryAllById(2));
 		
 		//movieDAO.insertMovie(movie);
 		
 		//CategoryService categoryService = new CategoryService();
-		//CategoryDAO categoryDao = new CategoryDAO();
-		
+		CategoryDAO categoryDao = new CategoryDAO();
+		System.out.println(categoryDao.querryAllDbById(2));
 		//List<Category> categoryList =  categoryService.listCategory();
 		
 		//categoryList.forEach(result -> System.out.println(result.toString()));
