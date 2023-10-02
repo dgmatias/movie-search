@@ -6,14 +6,14 @@
 
         <div>
 
-            <form>
+            <form (ngSubmit)="onSubmit()">
                 
                 <label for="name">Nome</label>
-                <input class="input-name" type="text" id="name" name="name" required>
+                <input class="input-name" type="text" id="name" name="name" [(ngModel)]="category.name" required>
     
                 <label for="img">Imagem</label> 
                 <p>É apropriado o uso de imagens  com dimensões 600x400</p>
-                <input class="input-file" type="file" id="img" name="img" required>
+                <input class="input-file" type="file" id="img" name="img" (change)="onFileSelected($event)" accept="image/*"  required>
             
                 <input class="input-submit" type="submit" value="Adicionar categoria">
             

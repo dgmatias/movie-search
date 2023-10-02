@@ -17,6 +17,7 @@ import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { InfoComponent } from './movie-info/info/info.component';
 import { InfoBannerComponent } from './movie-info/info-banner/info-banner.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [CategoryService, MovieService],
   bootstrap: [AppComponent]
