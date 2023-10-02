@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { MovieService } from './service/movie-service';
+import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { InfoComponent } from './movie-info/info/info.component';
+import { InfoBannerComponent } from './movie-info/info-banner/info-banner.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { MovieService } from './service/movie-service';
     CategoriesComponent,
     CategoryComponent,
     MoviesComponent,
-    MovieComponent
+    MovieComponent,
+    MovieInfoComponent,
+    InfoComponent,
+    InfoBannerComponent
   ],
   imports: [
     BrowserModule,

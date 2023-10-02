@@ -11,8 +11,48 @@ import model.Movie;
 
 public class MovieDAO {
 	
+	@SuppressWarnings("finally")
+	public Movie queryAllById(Integer id) {
+		
+		Connection cnx = Dao.getConnection();
+		
+		Movie movie = null;
+		
+		String sql = "SELECT * FROM movies WHERE id = ?";
+		
+		
+		PreparedStatement ps;
+		
+		try {
+			ps = cnx.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				
+				movie = new Movie();
+				
+				movie.setId(rs.getInt("id"));
+				movie.setName(rs.getString("name"));
+				movie.setSinopse(rs.getString("sinopse"));
+				movie.setDuration(rs.getString("duration"));
+				movie.setImg_small(rs.getString("img_small"));
+				movie.setImg_banner(rs.getString("img_banner"));
+				movie.setCategory_id(rs.getInt("category_id"));
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {			
+			return movie;
+		}
+		
+		
+	}
 	
-	public List<Movie> QueryAllDbByCategoryId(Integer id) {
+	public List<Movie> queryAllDbByCategoryId(Integer id) {
 		
 		Connection cnx = Dao.getConnection();
 		

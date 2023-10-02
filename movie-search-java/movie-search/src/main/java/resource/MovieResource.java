@@ -24,9 +24,24 @@ public class MovieResource {
 	public Response getMoviesByCategoryId(@PathParam("id") Integer id) {
 		
 		MovieService movieService = new MovieService();
-		List<Movie> listMovie = movieService.findMoviesById(id);
+		List<Movie> listMovie = movieService.findMoviesByCategoryId(id);
 		
 		Response response = Response.ok().entity(listMovie).build();
+		
+		return response;
+	}
+	
+	//http://localhost:8080/movie-search/rest/movie/movie/1
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("movie/{id}")
+	public Response getMoviesById(@PathParam("id") Integer id) {
+		
+		MovieService movieService = new MovieService();
+		Movie movie = movieService.findMovieById(id);
+		
+		Response response = Response.ok().entity(movie).build();
 		
 		return response;
 		

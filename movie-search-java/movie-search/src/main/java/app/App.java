@@ -23,9 +23,10 @@ public class App {
 		//movie.setCategory_id(1);
 		
 		MovieDAO movieDAO = new MovieDAO();
-		List<Movie> listMovie = movieDAO.QueryAllDbByCategoryId(1);
-		listMovie.forEach(result -> System.out.println(result.toString()));
+		//List<Movie> listMovie = movieDAO.queryAllDbByCategoryId(1);
+		//listMovie.forEach(result -> System.out.println(result.toString()));
 		
+		System.out.println(movieDAO.queryAllById(2));
 		
 		//movieDAO.insertMovie(movie);
 		

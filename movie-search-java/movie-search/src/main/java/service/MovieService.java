@@ -9,8 +9,12 @@ public class MovieService {
 	
 	MovieDAO movieDAO = new MovieDAO();
 	
-	public List<Movie> findMoviesById(int id) {
-		return movieDAO.QueryAllDbByCategoryId(id);
+	public List<Movie> findMoviesByCategoryId(Integer id) {
+		return movieDAO.queryAllDbByCategoryId(id);
+	}
+	
+	public Movie findMovieById(Integer id) {
+		return movieDAO.queryAllById(id);
 	}
 	
 }

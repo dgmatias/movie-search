@@ -13,4 +13,8 @@ export class MovieService {
         return this.http.get<MovieModel[]>(`${PRO_API}/movie-search/rest/movie/listByCategoryId/${id}`);
     }
 
+    listMovieById(id: number): Observable<MovieModel> {
+        return this.http.get<MovieModel>(`${PRO_API}/movie-search/rest/movie/movie/${id}`)
+    }
+
 }
