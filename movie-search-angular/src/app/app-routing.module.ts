@@ -4,10 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "add-category", component: AddCategoryComponent},
+  {path: "add-movie", component: AddMovieComponent},
   {path: "movies/:id", component: MoviesComponent},
   {path: "movie-info/:id", component: MovieInfoComponent},
 ];

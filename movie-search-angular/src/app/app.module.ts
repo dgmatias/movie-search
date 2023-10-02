@@ -18,6 +18,7 @@ import { InfoComponent } from './movie-info/info/info.component';
 import { InfoBannerComponent } from './movie-info/info-banner/info-banner.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { FormsModule } from '@angular/forms';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     MovieInfoComponent,
     InfoComponent,
     InfoBannerComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,

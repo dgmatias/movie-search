@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div> <h1> Adicionar Filme </h1> </div>
+
+    <div class="form-container">
+
+        <div>
+
+            <form>
+                
+                <label for="name">Nome</label>
+                <input class="input-data" type="text" id="name" name="name" required>
+
+                <label for="sinopse">Sinopse</label>
+                <textarea id="sinopse" name="sinopse" required cols="30" rows="10"></textarea>
+
+                <label for="duration">Duração</label>
+                <input type="time" id="duration" name="duration" required>
+
+                <label for="category_id">Categoria:</label>
+                <select id="category_id" name="category_id" required>
+                    <option value="1">Categoria 1</option>
+                    <option value="2">Categoria 2</option>
+                </select>
+    
+                <label for="img_small">Imagem pequena</label> 
+                <p>É apropriado o uso de imagens  com dimensões 600x400</p>
+                <input class="input-file" type="file" id="img_small" name="img_small"   required>
+
+                <label for="img_banner">Imagem do banner</label> 
+                <p>É apropriado o uso de imagens  com dimensões 1280x800</p>
+                <input class="input-file" type="file" id="img_banner" name="img_banner"   required>
+            
+                <input class="input-submit" type="submit" value="Adicionar filme">
+            
+            </form>
+
+        </div>
+        
+
+    </div>
+    
+
+</div>

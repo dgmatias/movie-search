@@ -6,7 +6,7 @@
 
         <mov-movie *ngFor="let m of movies" [movie]="m"></mov-movie>
 
-        <div *ngIf="movies.length == 0"> <span>Não existe nenhum filme nessa categoria, adicione algum filme.</span> </div>
+        <div *ngIf="movies.length == 0"> <a routerLink="/add-movie">Não existe nenhum filme deste gênero, adicione algum filme.</a> </div>
 
     </div>
 

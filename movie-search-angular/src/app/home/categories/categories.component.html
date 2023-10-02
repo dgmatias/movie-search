@@ -1,12 +1,12 @@
 <div class="container">
 
-    <div> <h1>Categorias</h1> </div>
+    <div> <h1>Gêneros</h1> </div>
 
     <div class="card-container">
 
         <mov-category *ngFor="let c of categories" [category]="c"></mov-category>
 
-        <div *ngIf="categories.length === 0"> <span> Não existem categorias, adicione alguma.</span> </div>
+        <div *ngIf="categories.length === 0"> <a routerLink="/add-category"> Não existe nenhum gênero, adicione algum.</a> </div>
 
     </div>
 
