@@ -6,30 +6,29 @@
 
         <div>
 
-            <form>
+            <form (ngSubmit)="onSubmit()">
                 
                 <label for="name">Nome</label>
-                <input class="input-data" type="text" id="name" name="name" required>
+                <input class="input-data" type="text" id="name" name="name" [(ngModel)]="movie.name" required>
 
                 <label for="sinopse">Sinopse</label>
-                <textarea id="sinopse" name="sinopse" required cols="30" rows="10"></textarea>
+                <textarea id="sinopse" name="sinopse" required cols="30" rows="10" [(ngModel)]="movie.sinopse"></textarea>
 
                 <label for="duration">Duração</label>
-                <input type="time" id="duration" name="duration" required>
+                <input type="time" id="duration" name="duration" [(ngModel)]="movie.duration" required>
 
                 <label for="category_id">Categoria:</label>
-                <select id="category_id" name="category_id" required>
-                    <option value="1">Categoria 1</option>
-                    <option value="2">Categoria 2</option>
+                <select  id="category_id" name="category_id" [(ngModel)]="movie.category_id" required>
+                    <option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
                 </select>
     
                 <label for="img_small">Imagem pequena</label> 
                 <p>É apropriado o uso de imagens  com dimensões 600x400</p>
-                <input class="input-file" type="file" id="img_small" name="img_small"   required>
+                <input class="input-file" type="file" id="img_small" name="img_small" (change)="onFileSelected($event)" accept="image/*"  required>
 
                 <label for="img_banner">Imagem do banner</label> 
                 <p>É apropriado o uso de imagens  com dimensões 1280x800</p>
-                <input class="input-file" type="file" id="img_banner" name="img_banner"   required>
+                <input class="input-file" type="file" id="img_banner" name="img_banner" (change)="onFileSelected2($event)" accept="image/*"  required>
             
                 <input class="input-submit" type="submit" value="Adicionar filme">
             

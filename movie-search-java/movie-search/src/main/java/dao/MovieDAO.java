@@ -12,6 +12,48 @@ import model.Movie;
 public class MovieDAO {
 	
 	@SuppressWarnings("finally")
+	public List<Movie> queryAllDb() {
+		
+		Connection cnx  = Dao.getConnection();
+		
+		List<Movie> movieList = new ArrayList<Movie>();
+		
+		String sql = "SELECT * FROM movies";
+		
+		Movie movie;
+		
+		PreparedStatement ps;
+		
+		try {
+			ps = cnx.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				
+				movie = new Movie();
+				
+				movie.setId(rs.getInt("id"));
+				movie.setName(rs.getString("name"));
+				movie.setSinopse(rs.getString("sinopse"));
+				movie.setDuration(rs.getString("duration"));
+				movie.setImg_small(rs.getString("img_small"));
+				movie.setImg_banner(rs.getString("img_banner"));
+				movie.setCategory_id(rs.getInt("category_id"));
+				
+				movieList.add(movie);
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			return movieList;
+		}
+		
+	}
+	
+	@SuppressWarnings("finally")
 	public Movie queryAllById(Integer id) {
 		
 		Connection cnx = Dao.getConnection();
@@ -52,6 +94,7 @@ public class MovieDAO {
 		
 	}
 	
+	@SuppressWarnings("finally")
 	public List<Movie> queryAllDbByCategoryId(Integer id) {
 		
 		Connection cnx = Dao.getConnection();
@@ -97,9 +140,9 @@ public class MovieDAO {
 		
 	}
 	
-	public Boolean insertMovie(Movie movie) {
+	public boolean insertMovie(Movie movie) {
 		
-		Boolean result = true;
+		boolean result = true;
 		
 		Connection cnx = Dao.getConnection();
 		

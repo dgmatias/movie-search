@@ -3,9 +3,9 @@ package app;
 import java.util.List;
 
 import dao.CategoryDAO;
-import dao.MovieDAO;
 import model.Category;
 import model.Movie;
+import service.MovieService;
 
 public class App {
 
@@ -14,10 +14,12 @@ public class App {
 		//Dao.getConnection();
 		Category category = new Category();
 		CategoryDAO categoryDAO = new CategoryDAO();
-		category.setName("Drama");
-		category.setImg("drama.jpg");
+		MovieService movieService = new MovieService();
 		
-		categoryDAO.insertCatergory(category);
+		//category.setName("Drama");
+		//category.setImg("drama.jpg");
+		
+		//categoryDAO.insertCatergory(category);
 		//Movie movie = new Movie();
 		
 		//movie.setName("Filme 4 ");
@@ -28,8 +30,8 @@ public class App {
 		//movie.setCategory_id(1);
 		
 		//MovieDAO movieDAO = new MovieDAO();
-		//List<Movie> listMovie = movieDAO.queryAllDbByCategoryId(1);
-		//listMovie.forEach(result -> System.out.println(result.toString()));
+		List<Movie> listMovie = movieService.listMovies();
+		listMovie.forEach(result -> System.out.println(result.toString()));
 		
 		//System.out.println(movieDAO.queryAllById(2));
 		
