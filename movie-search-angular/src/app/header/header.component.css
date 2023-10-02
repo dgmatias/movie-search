@@ -47,10 +47,11 @@
         line-height: 35px;
         /* background-color: #0A0014; */
         background-color: #0A0014;
-        position: absolute;
+        position: fixed;
         top:0;
         right: 0;
-        height: 50vh;
+        height: 100vh;
+        z-index: 1;
     }
     
     #item-side-menu-container {

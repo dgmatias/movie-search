@@ -1,5 +1,5 @@
 .container {
-    min-height: 30vh;
+    min-height: 40vh;
 }
 
 h1 {
@@ -14,9 +14,7 @@ h1 {
     /* background-color: aqua; */
     flex-wrap: wrap;
     gap: 30px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
+    padding: 2rem;
 }
 
 span {
