@@ -20,7 +20,7 @@ export class MovieInfoComponent {
   constructor(private route: ActivatedRoute, private movieService: MovieService, private categoryService: CategoryService) {
     this.id = this.route.snapshot.params['id'];
     this.movieService.listMovieById(this.id).subscribe(data => this.movie = data);
-    this.categoryService.listCategoryById(this.id_category).subscribe(data => this.category = data);
+    // this.categoryService.listCategoryByMovieId(this.movie).subscribe(data => this.category = data);
     
   }
 

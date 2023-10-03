@@ -3,6 +3,7 @@ import { HttpClient} from "@angular/common/http";
 import { Observable } from "rxjs";
 import { CategoryModel } from "../model/category-model";
 import { PRO_API } from "../app-api";
+import { MovieModel } from "../model/movie-model";
 
 @Injectable()
 export class CategoryService {
@@ -15,6 +16,12 @@ export class CategoryService {
 
     listCategoryById(id: number): Observable<CategoryModel> {
         return this.http.get<CategoryModel>(`${PRO_API}/movie-search/rest/category/category/${id}`);
+    }
+
+    listCategoryByMovieId(movie: MovieModel): Observable<CategoryModel> {
+        // console.log(`${PRO_API}/movie-search/rest/category/category/${movie.id}`);
+        return this.http.get<CategoryModel>(`${PRO_API}/movie-search/rest/category/category/${movie.category_id}`);
+
     }
 
     addCategory(category: CategoryModel) {
