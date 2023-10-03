@@ -54,9 +54,23 @@ export class AddMovieComponent {
 
 
   onSubmit() {
-    console.log(this.movie);
+    // Verifique se os campos obrigatórios estão preenchidos
+    if (
+      this.movie.name.trim() !== "" &&
+      this.movie.sinopse.trim() !== "" &&
+      this.movie.duration.trim() !== "" &&
+      this.movie.img_small.trim() !== "" &&
+      this.movie.img_banner.trim() !== "" &&
+      this.movie.category_id > 0
+    ) {
+      console.log(this.movie);
 
-    this.movieService.addMovie(this.movie).subscribe(()=>this.movieService.listMovies() );
+      this.movieService.addMovie(this.movie).subscribe(() => this.movieService.listMovies());
+    } else {
+      // Exiba uma mensagem de erro ou lógica de validação adicional, se necessário
+      console.error("Preencha todos os campos obrigatórios.");
+    }
   }
+
 
 }

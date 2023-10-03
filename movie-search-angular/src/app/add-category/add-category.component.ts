@@ -30,9 +30,14 @@ export class AddCategoryComponent {
   }
 
   onSubmit() {
-    console.log(this.category);
-
-    this.categoryService.addCategory(this.category).subscribe(()=> this.categoryService.listCategories());
+    if (this.category.name.trim() !== "" && this.category.img.trim() !== "") {
+      console.log(this.category);
+  
+      this.categoryService.addCategory(this.category).subscribe(() => this.categoryService.listCategories());
+    } else {
+      console.error("Os campos name e img não podem estar vazios.");
+    }
   }
+  
 
 }

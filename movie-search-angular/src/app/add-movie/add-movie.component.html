@@ -2,11 +2,13 @@
 
     <div> <h1> Adicionar Filme </h1> </div>
 
-    <div class="form-container">
-
+    
+    <div  class="form-container">
+        
         <div>
-
-            <form (ngSubmit)="onSubmit()">
+            <div *ngIf="categories.length == 0"> <a routerLink="/add-category"> É necessário pelo menos 1 gênero para adicionar um filme. </a> </div>
+            
+            <form *ngIf="categories.length > 0" (ngSubmit)="onSubmit()">
                 
                 <label for="name">Nome</label>
                 <input class="input-data" type="text" id="name" name="name" [(ngModel)]="movie.name" required>
@@ -17,7 +19,7 @@
                 <label for="duration">Duração</label>
                 <input type="time" id="duration" name="duration" [(ngModel)]="movie.duration" required>
 
-                <label for="category_id">Categoria:</label>
+                <label for="category_id">Gênero:</label>
                 <select  id="category_id" name="category_id" [(ngModel)]="movie.category_id" required>
                     <option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
                 </select>

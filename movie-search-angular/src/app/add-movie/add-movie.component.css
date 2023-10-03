@@ -12,6 +12,13 @@ h1 {
     text-align: center;
 }
 
+a {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
 label {
     font-size: 25px;
     color: white;
