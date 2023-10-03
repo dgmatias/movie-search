@@ -6,3 +6,9 @@
     height: 60vh;
     margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 700px) {
+    .container {
+        background-size: contain;
+    }
+}
