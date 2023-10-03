@@ -66,9 +66,11 @@ export class AddMovieComponent {
       console.log(this.movie);
 
       this.movieService.addMovie(this.movie).subscribe(() => this.movieService.listMovies());
+      alert("Filme adicionado com sucesso");
     } else {
       // Exiba uma mensagem de erro ou lógica de validação adicional, se necessário
       console.error("Preencha todos os campos obrigatórios.");
+      alert("Ocorreu algum erro");
     }
   }
 

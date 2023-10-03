@@ -34,8 +34,10 @@ export class AddCategoryComponent {
       console.log(this.category);
   
       this.categoryService.addCategory(this.category).subscribe(() => this.categoryService.listCategories());
+      alert("Gênero adicionando com sucesso");
     } else {
       console.error("Os campos name e img não podem estar vazios.");
+      alert("Ocorreu algum erro");
     }
   }
   
