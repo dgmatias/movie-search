@@ -1,6 +1,6 @@
 <div class="container">
 
-    <mov-banner></mov-banner>
+    <mov-banner *ngIf="movie" [movie]="movie"></mov-banner>
 
     <mov-categories></mov-categories>
 </div>

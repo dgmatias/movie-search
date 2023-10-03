@@ -21,6 +21,10 @@ export class MovieService {
         return this.http.get<MovieModel[]>(`${PRO_API}/movie-search/rest/movie/list`);
     }
 
+    listMovieRandom(): Observable<MovieModel> {
+        return this.http.get<MovieModel>(`${PRO_API}/movie-search/rest/movie/listRandom`)
+    }
+
     addMovie(movie: MovieModel) {
         return this.http.post(`${PRO_API}/movie-search/rest/movie/movie/`, movie);
     }

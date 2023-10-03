@@ -20,6 +20,18 @@ public class MovieResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("listRandom")
+	public Response getMovieRandom() {
+		MovieService movieService = new MovieService();
+		Movie movie = movieService.listMovieRandom();
+		
+		Response response = Response.ok().entity(movie).build();
+		return response;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("list")
 	public Response getMovies() {
 		MovieService movieService = new MovieService();

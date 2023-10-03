@@ -11,6 +11,42 @@ import model.Movie;
 
 public class MovieDAO {
 	
+	public Movie queryMovieRandom() {
+		
+		Connection cnx = Dao.getConnection();
+		
+		String sql = "SELECT * FROM movies ORDER BY RAND() LIMIT 1";
+		
+		Movie movie = null;
+		
+		PreparedStatement ps;
+		
+		try {
+			ps = cnx.prepareStatement(sql);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				movie = new Movie();
+				
+				movie.setId(rs.getInt("id"));
+				movie.setName(rs.getString("name"));
+				movie.setSinopse(rs.getString("sinopse"));
+				movie.setDuration(rs.getString("duration"));
+				movie.setImg_small(rs.getString("img_small"));
+				movie.setImg_banner(rs.getString("img_banner"));
+				movie.setCategory_id(rs.getInt("category_id"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return movie;
+		
+	}
+	
 	@SuppressWarnings("finally")
 	public List<Movie> queryAllDb() {
 		

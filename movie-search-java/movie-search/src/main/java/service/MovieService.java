@@ -13,6 +13,10 @@ public class MovieService {
 		return movieDAO.queryAllDb();
 	}
 	
+	public Movie listMovieRandom() {
+		return movieDAO.queryMovieRandom();
+	}
+	
 	public List<Movie> findMoviesByCategoryId(Integer id) {
 		return movieDAO.queryAllDbByCategoryId(id);
 	}

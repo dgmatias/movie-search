@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MovieModel } from 'src/app/model/movie-model';
 
 @Component({
   selector: 'mov-banner',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
-
+  @Input() movie!: MovieModel;
 }
