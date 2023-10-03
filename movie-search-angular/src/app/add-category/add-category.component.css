@@ -19,7 +19,7 @@ label {
 
 label,input {
     display: block;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .form-container {
@@ -50,7 +50,7 @@ form {
 p {
     font-size: 15px;
     color: white;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     font-weight: bold;
 }
 

@@ -5,7 +5,7 @@ use movieSearchDB;
 CREATE TABLE categories(
 	id int PRIMARY KEY AUTO_INCREMENT,
  	name varchar(30) UNIQUE NOT NULL,
-    img varchar(255) UNIQUE NOT NULL
+    img varchar(255) NOT NULL
 );
 
 CREATE TABLE movies(
@@ -18,12 +18,3 @@ CREATE TABLE movies(
     category_id int NOT NULL,
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
-
-INSERT INTO categories(name, img) VALUES
-('Ação', 'acao.jpg'),
-('Infantil', 'infantil.jpg'),
-('Comédia', 'comedia.jpg'),
-('Terror', 'terror.jpg');
-
-
-INSERT INTO movies (name, sinopse, duration, img_small, img_banner, category_id) VALUES ('Filme de ação', "Sinopse do filme de ação", "02:15:30" ,'acao.jpg', 'acao.jpg', 1), ('Filme infantil', "Sinopse do filme de infantil", "02:35:30" ,'infantil.jpg', 'infantil.jpg', 2), ('Filme de Comédia', "Sinopse do filme de comédia", "01:45:30" ,'comedia.jpg', 'comedia.jpg', 3), ('Filme de terror', "Sinopse do filme de terror", "03:25:30" ,'terror.jpg', 'terror.jpg', 4);

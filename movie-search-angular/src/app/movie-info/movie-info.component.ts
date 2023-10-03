@@ -13,16 +13,19 @@ import { CategoryService } from '../service/category-service';
 export class MovieInfoComponent {
 
   movie!: MovieModel;
-  category!: CategoryModel
-  id: number
+  category!: CategoryModel;
+  id_category!: number;
+  id: number;
 
   constructor(private route: ActivatedRoute, private movieService: MovieService, private categoryService: CategoryService) {
     this.id = this.route.snapshot.params['id'];
-
-    this.categoryService.listCategoryById(this.id).subscribe(data => this.category = data);
     this.movieService.listMovieById(this.id).subscribe(data => this.movie = data);
+    this.categoryService.listCategoryById(this.id_category).subscribe(data => this.category = data);
+    
+  }
 
-
+  ngOnInit() {
+    // console.log();
   }
 
 }
