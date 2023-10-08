@@ -16,7 +16,7 @@ Um site de pesquisa de informações de filmes utilizando Angular, Java e MySql
 
 </ul>
 
-### FrameWork
+### Framework
 
 <li> Angular </li>
 
