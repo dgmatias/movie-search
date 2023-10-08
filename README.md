@@ -4,16 +4,21 @@ Um site de pesquisa de informações de filmes utilizando Angular, Java e MySql
 
 ## Tecnologias
 
-Html
-Css
-TypeScript
-JavaScript
-Java
-MySql
+
+<ul> 
+
+<li> Html </li>
+<li> Css </li>
+<li> Typescript </li>
+<li> Javascript </li>
+<li> Java </li>
+<li> MySql </li>
+
+</ul>
 
 ### FrameWork
 
-Angular
+<li> Angular </li>
 
 ## Ambiente de desenvolvimento integrado (IDE)
 
