@@ -15,6 +15,9 @@ export class AddCategoryComponent {
     img: "",
   }
 
+  statusPopUp!: boolean;
+  textPopUp!: string;
+
   constructor(private categoryService: CategoryService) {}
 
   onFileSelected(event: any) {
@@ -34,10 +37,13 @@ export class AddCategoryComponent {
       console.log(this.category);
   
       this.categoryService.addCategory(this.category).subscribe(() => this.categoryService.listCategories());
-      alert("Gênero adicionando com sucesso");
+      this.textPopUp = "Gênero adicionado com sucesso";
+      this.statusPopUp = true;
     } else {
-      console.error("Os campos name e img não podem estar vazios.");
-      alert("Ocorreu algum erro");
+      // console.error("Os campos name e img não podem estar vazios.");
+      this.statusPopUp = true;
+      this.textPopUp = "Ocorreu algum erro";
+      // alert("Ocorreu algum erro");
     }
   }
   

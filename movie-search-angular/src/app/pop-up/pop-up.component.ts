@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mov-pop-up',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./pop-up.component.css']
 })
 export class PopUpComponent {
+
+  @Input() status!: boolean;
+  @Input() text!: string;
+
+  constructor() {}
+
+  close() {
+    this.status = false;
+  }
 
 }

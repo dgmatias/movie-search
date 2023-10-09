@@ -1,7 +1,7 @@
-<div class="container">
+<div *ngIf="status == true" class="container">
     
-    <div class="close-container"> <i class="fa-solid fa-x" style="color: #ffffff;"></i> </div>
+    <div class="close-container"> <i (click)="close()" class="fa-solid fa-x" style="color: #ffffff;"></i> </div>
 
-    <div class="span-container"> <span> Ocorreu algum erro </span> </div>
+    <div class="span-container"> <span> {{text}} </span> </div>
 
 </div>
