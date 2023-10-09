@@ -20,6 +20,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { FormsModule } from '@angular/forms';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InfoComponent,
     InfoBannerComponent,
     AddCategoryComponent,
-    AddMovieComponent
+    AddMovieComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
